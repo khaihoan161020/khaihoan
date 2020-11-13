@@ -320,11 +320,11 @@ input:focus, textarea:focus {
     border: 2px solid var(--btn-color-blue);
 }
 textarea {
-    resize: none;
     color: var(--text);
     padding: 30px;
     border: none;
     border: 2px solid transparent;
+    width: 100%;
 }
 form {
     display: flex;
@@ -612,7 +612,6 @@ form {
     .form__input, form, input {
         width: 100%;
     }
-
     .contact__form {
         width: 100%;
         position: unset;
@@ -741,8 +740,12 @@ form {
     .slider-experts {
         padding-bottom: 0px;
     }
-    
+    form {
+        flex-direction: column;
+    }
     textarea {
         width: 100%;
+    
     }
+   
 }
