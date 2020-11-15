@@ -738,11 +738,34 @@ form {
     .card__header span {
         font-size: 140px;
     }
+    .expert__info {
+        position: unset;
+        padding: 20px 40px;
+    }
+    .expert__avt {
+        position: unset;
+    }
 
 }
+@media only screen and (max-width: 500px){
+    .expert__info {
+        padding: 20px 40px;
+    }
+
+
+}
+
 
 @media only screen and (max-width: 450px) {
     .footer__menu .menu__list {
         width: 25%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .footer__menu {
+        justify-content: space-between;
+    }
+    .footer__menu .menu__list {
+        width: 15%;
     }
 }
