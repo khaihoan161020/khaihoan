@@ -240,7 +240,8 @@ header .btn:active {
     overflow: hidden;
 }
 .expert__avt img {
-
+    width: 100px;
+    height: 100px;
 }
 .direct {
     position: relative;
@@ -289,7 +290,8 @@ header .btn:active {
     padding: 95px 80px 90px 80px;
     background-image: url(./img/contact_bg.png);
     background-repeat: no-repeat;
-   position: relative;
+    background-size: cover;
+    position: relative;
 }
 .form__title {
     font-size: 36px;
@@ -315,6 +317,7 @@ input {
     padding: 0 35px;
     color: var(--text);
     border: 2px solid transparent;
+    width: 100%;
 }
 input:focus, textarea:focus {
     border: 2px solid var(--btn-color-blue);
@@ -328,15 +331,23 @@ textarea {
 }
 form {
     display: flex;
-    width: 750px;
+    width: 100%;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.form-group {
+    width: calc(50% - 25px);
+    
 }
 .form__input {
     display: flex;
     align-items: stretch;
     width: 750px;
     
+}
+.form__input #text{
+    width: 100%;
 }
 .form__map {
     position: absolute;
@@ -396,18 +407,6 @@ form {
     transform: scale(1.05);
     box-shadow: 0px 35px 30px 5px rgba(31, 110, 227,0.16)
 }
-.btn--submit::after {
-    content: "";
-    position: absolute;
-    background-image: url(./img/icon_arrow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 50%;
-    right: -60%;
-    bottom: 0px;
-    left: 0px;
-    transform: translateY(-50%);
-}
 .footer {
     display: flex;
     justify-content: space-between;
@@ -441,7 +440,7 @@ form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0;
+    padding: 40px 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.5) ;
 }
 .social .menu__items {
@@ -504,7 +503,7 @@ form {
         width: 1170px;
     }
     .wrapper-inner {
-        width: 1170px;
+        width: 100%;
     }
     #footer .container {
         width: 100%;
@@ -523,6 +522,7 @@ form {
     header {
         background-image: url(./img/banner_bg_left.png), url(./img/banner_bg_right.png), url(./img/banner_bg_main.png);
         background-size: 80px, 50%, 100%;
+        background-color: #4ba5ec;
     }  
     .nav {
         padding: 60px 0;
@@ -538,14 +538,7 @@ form {
         line-height: 30px;
         padding: 40px 0 50px 0;
     }
-    .form__input {
-        width: 750px;
-        flex-direction: column;
-    }
     
-    .form-group {
-        width: calc(50% - 25px);
-    }
     .form__map {
         position: absolute;
         width: 450px;
@@ -562,14 +555,14 @@ form {
         padding-bottom: 150px;
     }
     form {
-        width: 600px;
+        width: 100%;
         flex-direction: row;
         justify-content: space-between;
     }
     .form__input {
         display: flex;
         align-items: stretch;
-        width: 750px;
+        width: 700px;
     }
     .contact__form {
         margin: 0 auto;
@@ -589,7 +582,7 @@ form {
         width: 600px;
     }
     .btn--submit {
-        float: left;
+        
         width: 100%;
     }
     .list__cards {
@@ -597,79 +590,37 @@ form {
 
     }
 }
-@media screen and (max-width: 1300px) {
+@media only screen and (max-width: 1300px) {
     .container {
         width: 90%;
     }
-    .form__title{
+    .contact__form {
+        position: unset;
+    }
+    .form__map {
+        top: 0;
+        right: 0;
+        position: unset;
+        transform: unset;
+        margin-top: 50px;
+        width: 100%;
+        
+    }
+    .form__input {
+        width: 100%;
+    }
+    .form__title {
         text-align: center;
     }
     .contact__form .text-desc {
+        width: 100%;
         text-align: center;
-        margin: 0;
-        width: 100%;
-    }
-    .form__input, form, input {
-        width: 100%;
-    }
-    .contact__form {
-        width: 100%;
-        position: unset;
-        padding: 20px 50px;
     }
     
-    .form__map {
-        display:  none;
-        position: unset;
-        width: 450px;
-        height: 500px;
-        margin: 0;
-      
-    }
-    #footer {
-        background-image: url(./img/footer_bg.png);
-        background-size: 100% 80%;
-    }
-    .btn--submit {
-        float: unset;
+    /* .form__input form, .form__input input, .form__input  {
         width: 100%;
-    }
-    .card {
-        width: calc(50% - 15px);
-        padding: 35px 30px 40px 45px;
-        margin-bottom: 30px;
-        height: 550px;
-    }
-    .expert__info {
-        width: calc(45% - 30px);
-        background-color: #fbfcfc;
-        padding: 50px 40px 20px 40px;
-        position: relative;
-        transition: .4s;
-    }
-    .footer {
-        flex-wrap: wrap;
-    }
-    .footer__menu {
-        justify-content: space-around;
-    }
-    .footer__info {
-        width: 80%;
-        display: flex;
-    }
-    .footer {
-        justify-content: center;
-    }
-    .footer .text-desc {
-        padding: 0 20px;
-    }
-    .footer__menu {
-        margin: 30px auto 0 auto;
-        justify-content: space-around;
-    }
-    .wrapper-inner {
-        width: 100%;
-    }
+    } */
+
 }
 @media only screen and (max-width: 1150px) {
     header {
@@ -697,6 +648,17 @@ form {
         width: 100%;
         margin-bottom: 40px;
     }
+    .footer {
+        flex-wrap: wrap;
+        padding: 50px 0;
+        justify-content: space-around;
+    }
+    .footer__info {
+        width: 70%;
+    }
+    .footer__info .text-desc {
+        padding-bottom: 15px;
+    }
 }
 @media only screen and (max-width: 950px) {
     .burger {
@@ -707,7 +669,7 @@ form {
         font-size: 36px;
         line-height: 40px;
     }
-    .menu__list {
+    .nav .menu__list {
         display: none;
     }
     .list__cards {
@@ -720,10 +682,18 @@ form {
     .nav {
         padding: 50px 0 10px 0;
     }
+    .footer__menu {
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: center;
+    }
+    .footer__menu .menu__list {
+        width: 30%;
+    }
 }
 @media only screen and (max-width: 800px) {
     header {
-        background-color: #4896e9c5;
+        clip-path: polygon(100% 0, 100% 95%, 26% 100%, 0 93%, 0 48%, 0% 0%);
     }
     .list__cards {
         padding: 0 15px;
@@ -743,9 +713,30 @@ form {
     form {
         flex-direction: column;
     }
-    textarea {
+    .form-group {
         width: 100%;
-    
     }
+    .footer {
+        background-color: #4792e8;
+    }
+    
    
+    .contact-social {
+        flex-direction: column;
+        justify-content: start;
+    }
+    .contact-social div {
+        padding-bottom: 20px;
+    }
+    .contact__form {
+        padding: 15px;
+    }
+    .card__header img {
+        width: 100px;
+        height: 100px;
+    }
+    .card__header span {
+        font-size: 140px;
+    }
+
 }
