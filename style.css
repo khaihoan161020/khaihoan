@@ -740,3 +740,9 @@ form {
     }
 
 }
+
+@media only screen and (max-width: 450px) {
+    .footer__menu .menu__list {
+        width: 25%;
+    }
+}
