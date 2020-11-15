@@ -762,6 +762,16 @@ form {
     }
 }
 @media only screen and (max-width: 400px) {
+    .expert__info {
+        position: unset;
+        padding: 20px;
+    }
+    .expert__avt {
+        position: unset;
+    }
+    .card {
+        padding: 25px;
+    }
     .footer__menu {
         justify-content: space-between;
     }
